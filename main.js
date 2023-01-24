@@ -22,16 +22,17 @@ function gotResults(error, results) {
     document.getElementById("result_label").style.color = "rgb("+random_number_r+","+random_number_g+","+random_number_r+")";
     document.getElementById("result_confidence").style.color = "rgb("+random_number_r+","+random_number_g+","+random_number_r+")";
 
-    img = document.getElementById('cachorro') 
-    img1 = document.getElementById('gato')
-    img2 = document.getElementById('cavalo')
-    img3 = document.getElementById('vaca')
+    img = document.getElementById('cachorro'); 
 
     if (results[0].label == "cachorro") {
       img.src = 'download (1).jpeg';
     } else if (results[0].label == "gato") {
+       img.src='download (2).jpeg';
     } else if (results[0].label == "cavalo") {
-    }else if (results[0].label == "vaca")
+      img.src='download.jpeg';
+    }else if (results[0].label == "vaca") {
+      img.src='download.png';
     }
+    
   }
-
+}
